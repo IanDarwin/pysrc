@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 name = "Ian Darwin"
 
 first = name[0:3]

@@ -1,26 +1,28 @@
+#!/usr/bin/env python
+
 print bool('')
-False
+# False
 print bool(' ')
-True
+# True
 print bool(0)
-False
+# False
 print bool("0")
-True
+# True
 print 4==4
-True
+# True
 print 4=="4"
-False
+# False
 print 4==4.0
-True
+# True
 print 22/7
-3
+# 3
 print 22/7.0
-3.1428571428571428
+# 3.1428571428571428
 print 4 is 4
-True
+# True
 print 4 is 4.0
-False
+# False
 print "a" is "a"
-True
+# True
 print "a" is str("a")
-True
+# True

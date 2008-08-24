@@ -1,4 +1,4 @@
-#!/usr/bin/python -u
+#!/usr/bin/env python
 
 # demonstrate Python's variant of try/catch/finally
 
