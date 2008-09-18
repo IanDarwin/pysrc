@@ -1,7 +1,7 @@
 
 import shelve
 
-shelf = shelve.open('scan.shelf')
+shelf = shelve.open('shelfdemo')
 
 dict = { 'alpha':1, 'beta':2, 'gamma':3 }
 for (k,v) in dict.items():
