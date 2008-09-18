@@ -4,7 +4,7 @@
 
 from psycopg import connect;
 
-conn = connect("dbname=test user=test password=fred host=dos-vpn")
+conn = connect("dbname=test user=test password=fred host=server")
 
 cursor = conn.cursor()
 
