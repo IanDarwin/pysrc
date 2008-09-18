@@ -21,4 +21,3 @@ for i in range(len(results)):
 	row = results[i]
 	print "Row", i, "name", row[0], "value", row[1]
 
-#results = cursor.execute(query, vars=None)
