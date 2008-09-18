@@ -3,20 +3,15 @@ import shelve
 
 shelf = shelve.open('scan.shelf')
 
-dict = { 1:'alpha', 2:'beta', 3:'gamma' }
-for (k,v) in shelf.keys():
+dict = { 'alpha':1, 'beta':2, 'gamma':3 }
+for (k,v) in dict.items():
 	shelf[k] = v
 
-print "Dict:", dict
-print "Shelf Before: {",
-for (k,v) in shelf.keys():
-	print k, v
-print "}"
+print "Shelf Before: ", shelf
 
 shelf.close()
+del shelf
 
 sh2 = shelve.open('scan.shelf')
 
-print "Shelf2"
-for (k,v) in sh2.keys():
-	print k, v
+print "Shelf reloaded", sh2
