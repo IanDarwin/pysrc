@@ -6,5 +6,5 @@ import sys
 
 line="line";
 
-while sys.stdin.readline():
+for line in sys.stdin.readline():
 	print line
