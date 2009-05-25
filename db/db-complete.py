@@ -4,18 +4,18 @@
 
 from psycopg import connect;
 
-conn = connect("dbname=test user=test password=fred host=server")
+conn = connect("dbname=test user=test password=fred host=localhost")
 
 cursor = conn.cursor()
 
-cursor.execute("""CREATE TABLE test(
+cursor.execute("""CREATE TABLE list(
                   name char(8),
                   value float)""")
-cursor.execute("INSERT INTO test VALUES ('one', 1.0)")
-cursor.execute("INSERT INTO test VALUES ('two', 2.0)")
+cursor.execute("INSERT INTO list VALUES ('one', 1.0)")
+cursor.execute("INSERT INTO list VALUES ('two', 2.0)")
 conn.commit()
 
-cursor.execute("select * from test where name like 'o%'");
+cursor.execute("select * from list where name like 'o%'");
 results = cursor.fetchall()
 for i in range(len(results)):
 	row = results[i]
