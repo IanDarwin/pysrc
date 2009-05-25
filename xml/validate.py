@@ -1,13 +1,17 @@
-#!/usr/bin/python -u
+#!/usr/bin/env python
 
 # Parse/Validate using libxml2
 
 import sys
 import libxml2
 
-filename = "test.xml"
+if len(sys.argv) == 1:
+	filename = "test.xml"
+else:
+	filename = sys.argv[1]
+
 ctxt = libxml2.createFileParserCtxt(filename)
-ctxt.validate(1)
+ctxt.validate(True)
 ctxt.parseDocument()
 doc = ctxt.doc()
 if doc.name != filename:
