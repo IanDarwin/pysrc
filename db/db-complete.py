@@ -1,23 +1,34 @@
 #!/usr/bin/env python
 
-# all in one - create a table, populate it, query it, drop it.
+import os
 
-from psycopg import connect;
+""" all in one - create a table, populate it, query it, drop it."""
 
-conn = connect("dbname=test user=test password=fred host=localhost")
+# for PostgreSQL
+# from psycopg import connect
+# connString = "dbname=test user=test password=fred host=server"
+
+# for SQLite
+from sqlite3.dbapi2 import connect
+connString = ":memory:" # or a local file name
+
+conn = connect(connString)
 
 cursor = conn.cursor()
 
-cursor.execute("""CREATE TABLE list(
+cursor.execute("""CREATE TABLE test(
+                  id integer primary key,
                   name char(8),
                   value float)""")
-cursor.execute("INSERT INTO list VALUES ('one', 1.0)")
-cursor.execute("INSERT INTO list VALUES ('two', 2.0)")
+
+cursor.execute("INSERT INTO test(id,name,value) VALUES(1001, 'Hammy', 1.0)")
+cursor.execute("INSERT INTO test(id,name,value) VALUES(1002, 'Spammy', 2.0)")
+
 conn.commit()
 
-cursor.execute("select * from list where name like 'o%'");
-results = cursor.fetchall()
-for i in range(len(results)):
-	row = results[i]
-	print "Row", i, "name", row[0], "value", row[1]
+cursor.execute("select * from test where name like '%y'");
 
+results = cursor.fetchall()
+for row in results:
+	print "Row:", "id", row[0], "name", row[1], "value", row[2]
+print "(expected two rows)"
