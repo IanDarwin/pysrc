@@ -14,7 +14,7 @@ def train(features):
         model[f] += 1
     return model
 
-NWORDS = train(words(file('big.txt').read()))
+NWORDS = train(words(file('/usr/share/dict/words').read()))
 
 alphabet = 'abcdefghijklmnopqrstuvwxyz'
 
