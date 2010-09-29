@@ -26,3 +26,12 @@ print "a" is "a"
 # True
 print "a" is str("a")
 # True
+
+# Now the monkey business
+True = -1
+print True
+
+print 12 == 12
+
+True == -1
+
