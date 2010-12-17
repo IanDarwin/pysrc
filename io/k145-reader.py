@@ -5,8 +5,8 @@
 import sys
 import time
 
-def save(temp):
-	f = open("temperature.txt", "w")
+def save(num, temp):
+	f = open("temperature%d.txt" % int(num), "w")
 	m = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
 	f.write("%04.2f %s\n" % (float(temp), m))
 	f.close()
