@@ -13,6 +13,6 @@ print "Shelf Before: ", shelf
 shelf.close()
 del shelf
 
-sh2 = shelve.open('scan.shelf')
+sh2 = shelve.open('shelfdemo')
 
 print "Shelf reloaded", sh2
