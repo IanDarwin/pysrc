@@ -4,7 +4,7 @@
 
 from sqlite3.dbapi2 import connect
 
-connString = "fred"
+connString = "fred.sqlite"
 
 conn = connect(connString)
 print conn
