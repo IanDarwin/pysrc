@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import Gnuplot
 
 plotter = Gnuplot.Gnuplot(persist = 1) 
