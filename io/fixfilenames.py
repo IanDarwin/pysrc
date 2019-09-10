@@ -12,5 +12,5 @@ import sys
 
 for line in sys.stdin:
 	line = line[:-1]
-	print "mv '" + line + "' '" + \
+	print("mv '" + line + "' '" + \)
 	line.replace(r'\040',"_") + "'" 

@@ -6,14 +6,14 @@ def squareList(l):
 		yield i*i
 
 iter = squareList(range(1,5))
-print "Iter = ", iter
+print("Iter = ", iter)
 
-print "iter.next() = ", iter.next()
-print "iter.next() = ", iter.next()
+print("iter.next() = ", iter.next())
+print("iter.next() = ", iter.next())
 
-print "Resetting generator"
+print("Resetting generator")
 iter = squareList(range(1,5))
 
 # Iteration (normal):
 for s in iter:
-	print s
+	print(s)

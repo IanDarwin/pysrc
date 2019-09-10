@@ -30,5 +30,5 @@ cursor.execute("select * from test where name like '%y'");
 
 results = cursor.fetchall()
 for row in results:
-	print "Row:", "id", row[0], "name", row[1], "value", row[2]
-print "(expected two rows)"
+	print("Row:", "id", row[0], "name", row[1], "value", row[2])
+print("(expected two rows)")

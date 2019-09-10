@@ -9,7 +9,7 @@ from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
 class MyHandler(BaseHTTPRequestHandler):
 
     def do_GET(self):
-	print "doGet: path==" + self.path
+	print("doGet: path==" + self.path)
         try:
 	    if self.path == "/":
 		self.path = "index.html"
@@ -47,7 +47,7 @@ class MyHandler(BaseHTTPRequestHandler):
             
             self.end_headers()
             upfilecontent = query.get('upfile')
-            print "filecontent", upfilecontent[0]
+            print("filecontent", upfilecontent[0])
             self.wfile.write("<HTML>POST OK.<BR><BR>");
             self.wfile.write(upfilecontent[0]);
             
@@ -57,10 +57,10 @@ class MyHandler(BaseHTTPRequestHandler):
 def main():
     try:
         server = HTTPServer(('', 6666), MyHandler)
-        print 'started httpserver...'
+        print('started httpserver...')
         server.serve_forever()
     except KeyboardInterrupt:
-        print '^C received, shutting down server'
+        print('^C received, shutting down server')
         server.socket.close()
 
 if __name__ == '__main__':

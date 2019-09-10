@@ -5,7 +5,7 @@ class BankAccount:
          self.balance += amount
 
 acct=BankAccount(90210) # calls constructor
-print acct.balance
+print(acct.balance)
 acct.deposit(2500)
-print acct.balance
+print(acct.balance)
 

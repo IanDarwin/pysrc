@@ -7,10 +7,10 @@ from sqlite3.dbapi2 import connect
 connString = "fred.sqlite"
 
 conn = connect(connString)
-print conn
+print(conn)
 
 cursor = conn.cursor()
-print cursor
+print(cursor)
 
 cursor.execute("DROP TABLE if exists list")
 
@@ -27,5 +27,5 @@ conn.commit()
 cursor.execute("select * from list where name like '%y'");
 results = cursor.fetchall()
 for row in results:
-        print "Row:", "id", row[0], \
-			"name", row[1], "email", row[2]
+        print("Row:", "id", row[0], \
+			"name", row[1], "email", row[2])

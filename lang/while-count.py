@@ -5,4 +5,4 @@ while i <= 20:
 	total = total + i
 	i = i + 1
 
-print total
+print(total)

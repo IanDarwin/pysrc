@@ -11,7 +11,7 @@ label.pack()
 
 def handler(*args):
 	global field
-	print "You said", field.get()
+	print("You said", field.get())
 
 field = Entry(rootWindow)
 field.pack()

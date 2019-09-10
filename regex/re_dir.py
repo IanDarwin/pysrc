@@ -2,4 +2,4 @@
 
 import re
 
-print dir(re)
+print(dir(re))

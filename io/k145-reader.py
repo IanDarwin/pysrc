@@ -21,4 +21,4 @@ while (True):
 		temp = line.split()[1]
 		save(ch, temp)
 	else:
-		print "Reject line: " + line
+		print("Reject line: " + line)

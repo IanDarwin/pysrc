@@ -12,4 +12,4 @@ for (username,pages) in fakedata.items():
 	pages[username] = n
 
 for (u,qty) in pages.items():
-	print "chargeforpages.py", u, qty
+	print("chargeforpages.py", u, qty)

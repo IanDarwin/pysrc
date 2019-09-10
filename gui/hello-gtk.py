@@ -15,7 +15,7 @@ w.add(b)
 
 # create a silly callback function
 def hello(target):
-  print 'Goodbye cruel world'
+  print('Goodbye cruel world')
   exit()
 
 # make the button call the callback when pressed('clicked')

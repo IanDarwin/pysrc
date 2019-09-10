@@ -15,14 +15,14 @@ ctxt.validate(True)
 ctxt.parseDocument()
 doc = ctxt.doc()
 if doc.name != filename:
-    print "doc.name failed"
+    print("doc.name failed")
     sys.exit(1)
 root = doc.children
 if root.name != "doc":
-    print "root.name failed"
+    print("root.name failed")
     sys.exit(1)
 valid = ctxt.isValid()
 if valid != 1:
-    print "document not valid"
+    print("document not valid")
     sys.exit(1)
 doc.freeDoc()

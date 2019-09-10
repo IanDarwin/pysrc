@@ -7,4 +7,4 @@ import sys
 line="line";
 
 for line in open("/etc/passwd"):
-	print line[:-1]
+	print(line[:-1])

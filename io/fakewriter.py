@@ -8,10 +8,10 @@ class fakewriter:
 	def write(self, stuff):
 		self.buf += stuff
 	def dump(self):
-		print "Contents of", self, ":"
-		print self.buf
+		print("Contents of", self, ":")
+		print(self.buf)
 
-print "Hello"
+print("Hello")
 out = fakewriter()
 out.write("Hello")
 out.dump()

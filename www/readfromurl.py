@@ -9,4 +9,4 @@ file = urllib.urlopen(url)
 
 text = file.read()
 
-print text
+print(text)

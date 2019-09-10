@@ -12,10 +12,10 @@ class Stack:
 		return getattr(self.list, attrname)
 
 s = Stack([1,2,3]);
-print s
+print(s)
 s.push(42)
-print s
-print s.pop()
-print s.list.pop()
-print s
+print(s)
+print(s.pop())
+print(s.list.pop())
+print(s)
 

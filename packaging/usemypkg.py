@@ -2,7 +2,7 @@
 
 import mypkg.demo
 
-print "Hello from main"
+print("Hello from main")
 d = mypkg.demo.demo();
 d.demo()
-print "Goodbye from main"
+print("Goodbye from main")

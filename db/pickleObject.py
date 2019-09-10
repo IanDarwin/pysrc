@@ -21,4 +21,4 @@ if youWantThisToBlowUp:
 
 file2 = open('pickleObject.dat');
 fred2 = pickle.load(file2)
-print fred2
+print(fred2)

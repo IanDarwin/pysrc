@@ -7,8 +7,8 @@ class X:
 
 x = X()
 
-print dir(x)
+print(dir(x))
 
 mesg = 'belong to us'
 
-print 'All your %ss' % x._X__val, 'are', mesg, "!"
+print('All your %ss' % x._X__val, 'are', mesg, "!")

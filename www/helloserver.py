@@ -18,10 +18,10 @@ class MyHandler(BaseHTTPRequestHandler):
 def main():
     try:
         server = HTTPServer(('', 8080), MyHandler)
-        print 'started httpserver...'
+        print('started httpserver...')
         server.serve_forever()
     except KeyboardInterrupt:
-        print 'Interrupted, so goodbye!'
+        print('Interrupted, so goodbye!')
         server.socket.close()
 
 if __name__ == '__main__':

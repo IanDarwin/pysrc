@@ -2,13 +2,13 @@
 
 a = []
 if a:
-    print "yes"
+    print("yes")
 else:
-    print "no"
+    print("no")
 
 a.append(0)
 if a:
-    print "yes"
+    print("yes")
 else:
-    print "no"
+    print("no")
 

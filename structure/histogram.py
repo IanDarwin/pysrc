@@ -16,5 +16,5 @@ def makeHistogram( gradeList ) :
 	return histogram
 
 gradeList = [ 56, 38, 90, 86, 78, 49, 88 ]
-print makeHistogram(gradeList)
+print(makeHistogram(gradeList))
 

@@ -7,8 +7,8 @@ class X:
 
 x = X()
 setattr(x, 'bar', lambda: x.foo + 1)
-print x.bar()
+print(x.bar())
 
 x = X(42)
 setattr(x, 'bar', lambda: x.foo + 1)
-print x.bar()
+print(x.bar())

@@ -4,4 +4,4 @@ import re
 
 s = 'Forescore and seven years ago, our fathers brought forth...'
 
-print re.findall(r'\w+', s)
+print(re.findall(r'\w+', s))
