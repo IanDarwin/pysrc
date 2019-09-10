@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# try to compile and maybe run all
+
+find . -name \*.py |grep -v /www/ >/tmp/id
+for d in $(cat /tmp/id)
+do
+	echo === $d ===
+	python $d < /dev/null
+done
