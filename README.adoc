@@ -1,4 +1,4 @@
 = pysrc
 
 This is a set of Python code examples that I wrote, mainly for a course I taught privately
-some years ago. 
+some years ago. Updated for Python 3.x some time ago.
