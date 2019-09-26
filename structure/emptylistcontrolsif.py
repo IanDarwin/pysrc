@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+# Explore python's meaning of True/False
+
 a = []
 if a:
     print("yes")
