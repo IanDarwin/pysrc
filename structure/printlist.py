@@ -1,14 +1,16 @@
 #!/usr/bin/env python
 
-# print(a list using list comprehension)
+# print a list using list comprehension
 
-l = ['a', 'b', 'c']
+list = ['a', 'b', 'c']
 
-print(" ".join([i for i in l]))
+print list
 
-import string
-print(string.join([i for i in l], " "))
+print(" ".join([i for i in list]))
+
+import string # so we can use class method string.join
+print(string.join([i for i in list], " "))
 
 # Print a list with commas
-print(string.join([i for i in l], ", "))
+print(string.join([i for i in list], ", "))
 
