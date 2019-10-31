@@ -1,4 +1,25 @@
 = pysrc
 
 This is a set of Python code examples that I wrote, mainly for a course I taught privately
-some years ago. Updated for Python 3.x some time ago.
+some years ago. Updated at random!
+Contents are reasonably well predicted by the directory name:
+
+. datetime
+. db
+. graphics
+. gui
+. io
+. lang
+. numbers
+. oo
+. otherlang
+. packaging
+. regex
+. runall
+. starting
+. strings
+. structure
+. testing
+. textproc
+. www
+. xml
