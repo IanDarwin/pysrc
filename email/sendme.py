@@ -7,9 +7,9 @@ from email.mime.text import MIMEText
 # Collect parameters - you usually need an account on the server to send mail
 sender_email="user@domain.com"			# changeme
 sender_name="user"						# may be same as sender_email, or just name part
+passwd="SOME_PASSWD"					# changeme
 send_host="mail.domain.com"			# changeme
 port=587							# submission service
-passwd="SOME_PASSWD"				# changeme
 recip="RECIPIENT@SOMEDOMAIN.com"	# changeme
 
 print("Connecting to the SMTP server")
@@ -25,8 +25,11 @@ msg = MIMEMultipart()       # new message
 msg['From']=sender_email
 msg['To']=recip
 msg['Subject']="We can send email from Python"
-message="Welcome to the world of email from Python"
-msg.attach(MIMEText(message, 'plain'))
+message='''
+	<h1>Email from Python</h1>
+	Welcome to the brave new world of <a href='https://en.wikipedia.org/wiki/email'>email</a> 
+	from <a href="https://python.org/">Python</a>.'''
+msg.attach(MIMEText(message, 'html'))
 
 print("Sending your message")
 s.send_message(msg)
