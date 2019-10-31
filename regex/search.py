@@ -12,4 +12,5 @@ print(m.group(0))
 
 print(m.start(), m.end())
 
-print(s[m.start() : m.end()])
+print(s[:m.start()])
+print(s[m.end():])
