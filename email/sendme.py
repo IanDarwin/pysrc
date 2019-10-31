@@ -1,27 +1,28 @@
 ''' Send a short email via SMTP to a mail server '''
 
 import smtplib
-import email.mime
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
 # Collect parameters - you usually need an account on the server to send mail
-sender="SOMEBODY@foo.com"			# changeme
-send_host="smtp.gmail.com"			# changeme
+sender_email="user@domain.com"			# changeme
+sender_name="user"						# may be same as sender_email, or just name part
+send_host="mail.domain.com"			# changeme
 port=587							# submission service
 passwd="SOME_PASSWD"				# changeme
 recip="RECIPIENT@SOMEDOMAIN.com"	# changeme
 
 print("Connecting to the SMTP server")
 s = smtplib.SMTP(host=send_host, port=587)
+print("Starting TLS session")
 s.starttls()
 
 print("Logging you in")
-s.login(sender, passwd)
+s.login(sender_name, passwd)
 
 print("Making a message")
-msg = multipart.MIMEMultipart()       # new message
-msg['From']=sender
+msg = MIMEMultipart()       # new message
+msg['From']=sender_email
 msg['To']=recip
 msg['Subject']="We can send email from Python"
 message="Welcome to the world of email from Python"
