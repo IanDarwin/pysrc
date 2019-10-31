@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+''' Make one substitution multiple times in a string '''
+
 import re
 
 s = 'Forescore and seven years ago, our fathers brought forth...'

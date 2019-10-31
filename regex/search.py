@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+''' Show matcher groups in action '''
+
 import re
 
 s = 'Forescore and seven years ago, our fathers brought forth...'
