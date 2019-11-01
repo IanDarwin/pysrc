@@ -1,25 +1,27 @@
 = pysrc
 
-This is a set of Python code examples that I wrote, mainly for a course I taught privately
-some years ago. Updated at random!
+This is a set of Python code examples that I have worked on over the years.
+Updated infrequently, and quite at random! Do a `git pull` every few months to keep up.
 Contents are reasonably well predicted by the directory name:
 
-. datetime
-. db
-. graphics
-. gui
-. io
-. lang
-. numbers
-. oo
-. otherlang
-. packaging
-. regex
-. runall
-. starting
-. strings
-. structure
-. testing
-. textproc
-. www
-. xml
+* datetime
+* db
+* graphics
+* gui
+* io
+* lang
+* numbers
+* oo - Object Orientation
+* otherlang - Dealing with other languages
+* packaging - Should be called `modules` probably
+* regex	- you need this.
+* starting
+* strings
+* structure
+* testing
+* textproc
+* www
+* xml
+
+There is also `runall` which tries to do what its name implies,
+but will likely need editing for your environment.
