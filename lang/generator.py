@@ -23,7 +23,7 @@ for t in totals:
 # The generator has been "used up" so we have to re-create it
 totals = (price - (price * discount) for price in prices if price>100)
 
-print("Use generator 'manually', doing what the 'for' loop did internally
+print("Use generator 'manually', doing what the 'for' loop did internally")
 print(next(totals))
 print(next(totals))
 print(next(totals))
