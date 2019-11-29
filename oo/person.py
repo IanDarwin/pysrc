@@ -6,3 +6,6 @@ class Person:
 
 	def getName(self):
 		return self.firstname + ' ' + self.lastname;
+
+ian = Person('Ian', 'Darwin')
+print(ian)
