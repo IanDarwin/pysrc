@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 # pip install tkinter if the next line shows 'unresolved':
-from Tkinter import Tk,Frame,Button
+from tkinter import Tk,Frame,Button
 
 class HelloButton(object):
         def __init__(self, master):
