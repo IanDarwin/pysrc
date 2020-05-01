@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
-import os;
+import os
 
-os.system("ls -l /");
+# This will work OK on Unix, Linux, macOS...
+os.system("ls -l /")
