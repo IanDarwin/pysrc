@@ -3,3 +3,8 @@
 import datetime
 
 print(datetime.datetime.today())
+
+import time
+print(time.asctime())
+
+print(time.strftime("%c"))
