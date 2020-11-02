@@ -16,7 +16,7 @@ while (True):
 	line = sys.stdin.readline();
 	ch = line[0]
 	if (ch == 'R'):
-		println("Revision Line", line);
+		print("Revision Line", line);
 	elif ch in ('1','2','3','4'):
 		temp = line.split()[1]
 		save(ch, temp)
