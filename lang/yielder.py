@@ -8,8 +8,8 @@ def squareList(l):
 iter = squareList(range(1,5))
 print("Iter = ", iter)
 
-print("iter.next() = ", iter.next())
-print("iter.next() = ", iter.next())
+print("iter next() = ", next(iter))
+print("iter.next() = ", next(iter))
 
 print("Resetting generator")
 iter = squareList(range(1,5))
