@@ -4,6 +4,9 @@
 # Create with real+imaginary with 'j' at end
 a=3+4j
 print(a)
+print(type(a))
 print(a*2)  # doubled
 print(a+1)  # adds to real part
 print(a**2) # squared
+print(a.real)
+print(a.imag)

@@ -4,5 +4,5 @@
 
 map = {'Tom':'Jones', 'Robin':'Lee'}
 
-for (k,v) in map.items():
+for k,v in map.items():
 	print(k + "=>" + v)

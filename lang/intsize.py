@@ -1,0 +1,9 @@
+#!/usr/bin/env python
+
+# ints are unlimited size, not int64
+
+i = 999999999999999999999999999999999999999999999999999999999999999999999999999
+
+print(i)
+
+print(i/1.0)
