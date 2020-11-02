@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 # read lines from a kitsRus "K145" temperature sensor
+# Marginal general utility but shows one means of dealing with external devices
 
 import sys
 import time
