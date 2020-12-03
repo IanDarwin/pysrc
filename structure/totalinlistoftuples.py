@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 
-# add up running totals in a dictionary
+# add up running totals in a list of tuples
 # case study: printer accounting
 
-fakedata={'ian':4, 'robin':1, 'ian':6, 'unknown':1}
+fakedata=[('ian',4), ('robin',1), ('ian',6), ('unknown',1)]
 pages={}
 
-for (username,pages) in fakedata.items():
+for (username,numpages) in fakedata:
+	# Despite the name, setDefault gets a value if present
 	n = pages.setdefault(username, 0)
 	n += numpages
 	pages[username] = n
