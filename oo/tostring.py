@@ -8,7 +8,7 @@ class Trip:
         self.arrCity = arrCity
         
     def __str__(self):
-        return "Trip from {0} to {1}".format(self.depCity, self.arrCity)
+        return "Trip from {} to {}".format(self.depCity, self.arrCity)
 
 trip = Trip('Toronto', 'Jamaica')
 print(trip)
