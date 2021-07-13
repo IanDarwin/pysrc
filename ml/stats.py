@@ -27,3 +27,6 @@ print("Median is", numpy.median(prices))
 from scipy import stats
 
 print("Mode is", stats.mode(prices))
+
+# For more on statistics for ML in Python, see
+# https://www.w3schools.com/python/python_ml_standard_deviation.asp
