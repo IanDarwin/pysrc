@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# Create a function that returns an interator (using yield)
+# Create a function that returns a generator object (using yield)
 def squareList(l):
 	for i in l:
 		yield i*i
@@ -8,8 +8,8 @@ def squareList(l):
 iter = squareList(range(1,5))
 print("Iter = ", iter)
 
-print("iter.next() = ", iter.next())
-print("iter.next() = ", iter.next())
+print("iter next() = ", next(iter))
+print("iter.next() = ", next(iter))
 
 print("Resetting generator")
 iter = squareList(range(1,5))

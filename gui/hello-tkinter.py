@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from Tkinter import Tk,Button,Label,Entry
+from tkinter import Tk,Button,Label,Entry
 
 global field
 

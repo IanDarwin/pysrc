@@ -1,12 +1,19 @@
 #!/usr/bin/env python
 
-# partly-written fake output class. 
-# DO NOT COMMIT until can assign to sys.out and have "print" work.
+# fake output class - works due to duck-typing. 
+
+import sys
 
 class fakewriter:
-	buf = ''
+	def __init__(self):
+		self.buf = ''
+		self.stdout = sys.stdout
+	def print(self, stuff):
+		self.buf += stuff
 	def write(self, stuff):
 		self.buf += stuff
+	def flush(self):
+		self.stdout.write(self.buf)
 	def dump(self):
 		print("Contents of", self, ":")
 		print(self.buf)
@@ -15,3 +22,6 @@ print("Hello")
 out = fakewriter()
 out.write("Hello")
 out.dump()
+
+sys.stdout = fakewriter()
+print("Neat")

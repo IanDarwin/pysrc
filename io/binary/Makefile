@@ -3,13 +3,11 @@ all:	write read
 write:	writedata.py
 	python $?
 
-read:	x.y ReadData.class
-	java ReadData
+read:	x.y ReadData.java
+	@echo "It should print 123 then -1 for EOF (End Of File)"
+	java ReadData.java
 
 x.y:	write
 
-ReadData.class: ReadData.java
-	javac ReadData.java
-
 clean:
-	@rm -f ReadData.class x.y
+	@rm -f x.y
