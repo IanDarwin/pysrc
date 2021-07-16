@@ -3,6 +3,9 @@ class Person:
 		self.firstname = firstname
 		self.lastname = lastname
 
+	def get_name(self):
+		return self.firstname + ' ' + self.lastname
+
 class Customer(Person):
 	def __init__(self, company, *nameargs):
 		self.company  = company
