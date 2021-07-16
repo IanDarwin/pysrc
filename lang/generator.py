@@ -26,6 +26,8 @@ print("Use generator 'manually', doing what the 'for' loop did internally")
 print(next(totals))
 print(next(totals))
 print(next(totals))
+# This would throw a StopIteration to indicate that the iteration is used up.
+# print(next(totals))
 
 # Different brackets, different result
 totals = [price - fee for price in prices]
