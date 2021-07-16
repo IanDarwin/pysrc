@@ -13,16 +13,11 @@ print("Mean is", sum(prices)/len(prices))
 # Or we can use numpy to compute it.
 import numpy
 print("Mean is", numpy.mean(prices))
-# 203.25
 
 # Getting the median would be harder by hand, easier with numpy
 print("Median is", numpy.median(prices))
-# 176.5
 
-# Same for the mode:
-
-# print("Mode is", numpy.mode(prices))
-# Exception: no such method
+# Ditto for the mode, so we use scipy:
 
 from scipy import stats
 
