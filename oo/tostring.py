@@ -11,5 +11,6 @@ class Trip:
         return "Trip from {} to {}".format(self.depCity, self.arrCity)
 
 trip = Trip('Toronto', 'Jamaica')
+
 print(trip)
 
