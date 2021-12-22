@@ -4,7 +4,5 @@
 
 import sys
 
-line="line";
-
 for line in sys.stdin:
-	print(line[:-1])
+	print(line[:-1])	# Cheesy rstrip()
