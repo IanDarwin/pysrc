@@ -26,7 +26,7 @@ print("Use generator 'manually', doing what the 'for' loop did internally")
 print(next(totals))
 print(next(totals))
 print(next(totals))
-# This would throw a StopIteration to indicate that the iteration is used up.
+# This would throw a StopIteration exception to indicate that the iteration is used up.
 # print(next(totals))
 
 # Different brackets, different result
