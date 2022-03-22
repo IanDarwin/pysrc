@@ -12,3 +12,5 @@ print(dir(x))
 mesg = 'belong to us'
 
 print('All your %ss' % x._X__val, 'are', mesg, "!")
+
+# SO: they are accessible - from within the module but outside the class definition.
