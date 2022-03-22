@@ -5,23 +5,27 @@ Updated infrequently, and quite at random! Do a `git pull` every few months to k
 Contents are reasonably well predicted by the directory name:
 
 * datetime
-* db
+* database
 * graphics
-* gui
+* gui - graphical user interfaces
+* i18n - internationalization
 * io
-* lang
-* numbers
+* iteration - the iterator protocol & friends
+* lang - basic language stuff
+* ml - machine learning
+* numbers - numerics
 * oo - Object Orientation
 * otherlang - Dealing with other languages
 * packaging - Should be called `modules` probably
 * regex	- you need this.
-* starting
+* sidebyside - comparison with some other programming languages
+* starting - getting started
 * strings
-* structure
+* structure - collections / data structuring
 * testing
 * textproc
 * www
 * xml
 
-There is also `runall` which tries to do what its name implies,
-but will likely need editing for your environment.
+There is also a `runall` script which tries to do what it says on the tin,
+but may well need editing for your environment.
