@@ -27,6 +27,9 @@ immutable
     has to be created if a different value has to be stored. They play
     an important role in places where a constant hash value is needed,
     for example as a key in a dictionary.
+
+By those definitions, this class is hashable but NOT immutable.
+Could make it the latter by renaming name to __name throughout.
 '''
 
 class Demo:
