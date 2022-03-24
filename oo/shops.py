@@ -3,18 +3,21 @@ class Shop:
       varA = 10
       def describe(self):
           print("Shop")
-      def methShop(self):
+      def welcome(self):
           print("Hello from the Shop base class")
 class CheeseShop(Shop):
       def describe(self):
-          print("Hello and Welcome to the",)
-          Shop.describe(self)
-          print("This Shop sells only Cheese")
+          print("Hello and Welcome to the Cheese Shop")
+          print("\tThis Shop sells only the finest Cheeses!")
 class PetShop(Shop):
       var = 15
       varB = 15
       def describe(self):
           print("The Pet Shop")
-      def methPetShop(self):
+      def methodPetShop(self):
           print("Hello from the Pet Shop")
 
+
+CheeseShop().describe();
+
+PetShop().describe();
