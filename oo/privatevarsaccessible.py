@@ -5,12 +5,22 @@
 class X:
 	__val = 'base'
 
-x = X()
+if __name__ == '__main__':
 
-print(dir(x))
+	x = X()
 
-mesg = 'belong to us'
+	mesg = 'belong to us'
 
-print('All your %ss' % x._X__val, 'are', mesg, "!")
+	# Python's pseudo-private variables are implemented just by mangling the name to hide them.
+	# You can see it in the dir(x) output:
+	print(dir(x))
+	# Backdoor if you know the trivial mangling algorithm:
+	print('All your %ss' % x._X__val, 'are', mesg, "!")
 
-# SO: they are accessible - from within the module but outside the class definition.
+	# This won't compile
+	# X.__val
+
+	# Devs of a class would normally provide getters for private attributes.
+
+	# SO: private vars ARE accessible outside - but only by the back door.
+	# Java has a backdoor too - using member.setPrivate(false) in the Reflection API.
