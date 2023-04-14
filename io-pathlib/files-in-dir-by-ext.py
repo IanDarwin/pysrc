@@ -1,7 +1,15 @@
 #!/usr/bin/env python
 
+import sys
+from pathlib import Path
+
 # The directory we will look in, and what to look for
-dir_path = "/home/ian/pytalk"
+dir_path = Path.home() / 'pytalk'
+
+if not dir_path.exists():
+	print("You can't run this example as you don't have ~/pytalk.")
+	sys.exit(1)
+
 ext = ".odp"
 
 # The traditional way
