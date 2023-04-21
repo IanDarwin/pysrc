@@ -7,15 +7,15 @@ from pathlib import Path
 dir_path = Path.home() / 'pytalk'
 
 if not dir_path.exists():
-	print("You can't run this example as you don't have ~/pytalk.")
-	sys.exit(1)
+    print("You can't run this example as you don't have ~/pytalk.")
+    sys.exit(1)
 
 ext = ".odp"
 
 # The traditional way
 import os
-files = [os.path.join(dir_path, f) for f in os.listdir(dir_path) \
-        if os.path.isfile(os.path.join(dir_path, f)) and f.endswith(ext)]
+files = [os.path.join(dir_path, f) for f in os.listdir(dir_path)
+    if os.path.isfile(os.path.join(dir_path, f)) and f.endswith(ext)]
 print(files)
 
 # The pathlib way
