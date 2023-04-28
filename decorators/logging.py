@@ -10,6 +10,7 @@ def function_trace(func):
 
 @function_trace
 def greetings(name):
+    print("Executing in greetings function")
     return f"Hello, {name}!"
 
-greetings("Ian")
+print(greetings("Ian"))
