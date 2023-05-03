@@ -4,15 +4,16 @@ This is a set of Python code examples that I have worked on over the years.
 Updated infrequently, and quite at random! Do a `git pull` every few months to keep up.
 Contents are reasonably well predicted by the directory name:
 
-* datetime
 * database
+* datasci - Data Science, ML, etc.
+* datetime
 * graphics
 * gui - graphical user interfaces
 * i18n - internationalization
-* io
+* io - input and output
+* io_pathlib - new improved IO
 * iteration - the iterator protocol & friends
 * lang - basic language stuff
-* ml - machine learning
 * numbers - numerics
 * oo - Object Orientation
 * otherlang - Dealing with other languages
