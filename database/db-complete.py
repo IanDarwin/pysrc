@@ -26,9 +26,11 @@ cursor.execute("INSERT INTO test(id,name,value) VALUES(1002, 'Spammy', 2.0)")
 
 conn.commit()
 
+print("Data saved, now retrieving it.");
+
 cursor.execute("select * from test where name like '%y'");
 
-results = cursor.fetchall()
-for row in results:
-	print("Row:", "id", row[0], "name", row[1], "value", row[2])
+for id, name, value in cursor.fetchall():
+	print("Row {}, name {}, value {}".format(id, name, value));
+
 print("(expected two rows)")
