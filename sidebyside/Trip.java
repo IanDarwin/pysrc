@@ -11,6 +11,11 @@ class Trip {
 	void printSchedule() {
 		System.out.printf("Starts %s, ends %d\n", start, end);
 	}
+
+	// Simple demo
+	public static void main(String[] args) { 
+		System.out.println(new Cruise(LocalDate.of(2026,12,28), LocalDate.of(2027,01,12), "Sea Shanty", 123));
+	}
 }
 class Cruise extends Trip {
 	String ship;
@@ -24,5 +29,8 @@ class Cruise extends Trip {
 	void printSchedule() {
 		System.out.print("Aboard " + ship + " ");
 		super.printSchedule();
+	}
+	public String toString() {
+		return String.format("Cruise on %s from %s to %s (Cabin %d)", ship, start, end, cabin);
 	}
 }
