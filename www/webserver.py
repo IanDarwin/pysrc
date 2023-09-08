@@ -14,7 +14,9 @@ class MyHandler(BaseHTTPRequestHandler):
             if self.path == "/":
                 self.path = "index.html"
                 if self.path.endswith(".html"):
-                    f = open(curdir + sep + self.path) #self.path has /test.html
+                    full_path = curdir + sep + self.path #self.path has /test.html
+                    print("Serving", full_path)
+                    f = open(full_path)
 
                     # note that the above line potentially makes every file on your computer readable by the internet
 
@@ -33,7 +35,7 @@ class MyHandler(BaseHTTPRequestHandler):
                     return
             return
         except IOError:
-            self.send_error(404,'File Not Found: %s' % self.path)
+            self.send_error(404,'File Not Found: {}'.format(self.path))
 
     def do_POST(self):
         global rootnode
@@ -55,7 +57,7 @@ class MyHandler(BaseHTTPRequestHandler):
 
 def main():
     try:
-        server = HTTPServer(('', 6666), MyHandler)
+        server = HTTPServer(('', 8080), MyHandler)
         print('started httpserver...')
         server.serve_forever()
     except KeyboardInterrupt:
