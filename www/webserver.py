@@ -1,6 +1,6 @@
-#!/usr/local/bin/python
+#!/usr/bin/env python
 
-# Copyright Jon Berg, turtlemeat.com
+# Portions Copyright Jon Berg, turtlemeat.com
 
 import string,cgi,time
 from os import curdir, sep
@@ -15,7 +15,8 @@ class MyHandler(BaseHTTPRequestHandler):
 		self.path = "index.html"
             if self.path.endswith(".html"):
                 f = open(curdir + sep + self.path) #self.path has /test.html
-#note that this potentially makes every file on your computer readable by the internet
+
+# note that the above line potentially makes every file on your computer readable by the internet
 
                 self.send_response(200)
                 self.send_header('Content-type',	'text/html')
@@ -48,6 +49,7 @@ class MyHandler(BaseHTTPRequestHandler):
             self.end_headers()
             upfilecontent = query.get('upfile')
             print("filecontent", upfilecontent[0])
+			# Note that for this demo, for security, we don't actually save the file.
             self.wfile.write("<HTML>POST OK.<BR><BR>");
             self.wfile.write(upfilecontent[0]);
             
