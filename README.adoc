@@ -2,6 +2,10 @@
 
 This is a set of Python code examples that I have worked on over the years.
 Updated infrequently, and quite at random! Do a `git pull` every few months to keep up.
+
+**N.B. Some examples are known to fail**, either because Python moved on and I didn't, or,
+because you need to `pip install` some module that isn't installed on your system.
+
 Contents are reasonably well predicted by the directory name:
 
 * database
