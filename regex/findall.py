@@ -4,6 +4,6 @@ import re
 
 '''Find all occurrences of a pattern in a string'''
 
-s = 'Forescore and seven years ago, our fathers brought forth...'
+s = "Once, upon a midnight dreary, as I pondered, weak, and weary..."
 
-print(re.findall(r'\w+', s))
+print(re.findall(r'[^\w](a\w+)', s))
