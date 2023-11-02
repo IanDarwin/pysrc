@@ -8,7 +8,7 @@ ba=bytearray([1,2,3])
 print(ba)
 # Should print: bytearray(b'\x01\x02\x03')
 
-bfile=open("/tmp/bfile", 'wb');
+bfile=open("./bfile", 'wb');
 n = bfile.write(ba)
 if (n == len(ba)):
 	pass
