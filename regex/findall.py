@@ -6,4 +6,4 @@ import re
 
 s = "Once, upon a midnight dreary, as I pondered, weak, and weary..."
 
-print(re.findall(r'[^\w](a\w+)', s))
+print(re.findall(r'[^\w](a\w?)', s))
