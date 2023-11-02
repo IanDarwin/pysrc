@@ -12,6 +12,8 @@ print(x1.bar())
 
 # Add the same method to the class, so all
 # instances will have it.
-X.bar = lambda x: x.foo + 1
+X.zee = lambda x: x.foo + 2
 x2 = X(42)
-print(x2.bar())
+print(x2.zee())
+
+print(x1.zee())
