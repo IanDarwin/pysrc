@@ -4,9 +4,9 @@
 
 from sqlite3.dbapi2 import connect
 
-connString = "fred.sqlite"
+file_name = "fred.sqlite"
 
-conn = connect(connString)
+conn = connect(file_name)
 print(conn)
 
 cursor = conn.cursor()
@@ -29,3 +29,7 @@ results = cursor.fetchall()
 for row in results:
         print("Row:", "id", row[0], \
 			"name", row[1], "email", row[2])
+
+print("All done with DB");
+conn.close();
+pathlib.Path(file_name).unlink()
