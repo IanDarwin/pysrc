@@ -2,7 +2,8 @@
 
 # all in one - create a table, populate it, query it, drop it.
 
-from sqlite3.dbapi2 import connect
+import pathlib
+from sqlite3 import connect
 
 file_name = "fred.sqlite"
 
