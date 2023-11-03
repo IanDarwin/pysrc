@@ -25,7 +25,7 @@ cursor.execute("INSERT INTO list(id,name,email) VALUES(1002, 'Spammy', 'spam@ham
 
 conn.commit()
 
-cursor.execute("select * from list where name like '%y'");
+cursor.execute("select id,name,email from list where name like '%y'");
 results = cursor.fetchall()
 for row in results:
         print("Row:", "id", row[0], \
