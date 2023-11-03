@@ -12,25 +12,25 @@ import os
 from sqlite3.dbapi2 import connect
 connString = ":memory:" # or a local file name
 
-conn = connect(connString)
+with connect(connString) as conn:
 
-cursor = conn.cursor()
+	cursor = conn.cursor()
 
-cursor.execute("""CREATE TABLE test(
-                  id integer primary key,
-                  name char(8),
-                  value float)""")
+	cursor.execute("""CREATE TABLE test(
+					  id integer primary key,
+					  name char(8),
+					  value float)""")
 
-cursor.execute("INSERT INTO test(id,name,value) VALUES(1001, 'Hammy', 1.0)")
-cursor.execute("INSERT INTO test(id,name,value) VALUES(1002, 'Spammy', 2.0)")
+	cursor.execute("INSERT INTO test(id,name,value) VALUES(1001, 'Hammy', 1.0)")
+	cursor.execute("INSERT INTO test(id,name,value) VALUES(1002, 'Spammy', 2.0)")
 
-conn.commit()
+	conn.commit()
 
-print("Data saved, now retrieving it.");
+	print("Data saved, now retrieving it.");
 
-cursor.execute("select * from test where name like '%y'");
+	cursor.execute("select * from test where name like '%y'");
 
-for id, name, value in cursor.fetchall():
-	print("Row {}, name {}, value {}".format(id, name, value));
+	for id, name, value in cursor.fetchall():
+		print("Row {}, name {}, value {}".format(id, name, value));
 
-print("(expected two rows)")
+	print("(expected two rows)")
