@@ -1,3 +1,5 @@
+# pytest works on assertions; see https://docs.pytest.org/en/8.0.x/
+
 def inc(x):
     return x + 1
 
