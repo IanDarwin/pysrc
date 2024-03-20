@@ -2,8 +2,7 @@
 
 # try to compile and maybe run all
 
-find * -name \*.py |grep -v /www/ >/tmp/id
-for d in $(cat /tmp/id)
+for d in $(find * -name \*.py |grep -v /www/)
 do
 	echo === $d ===
 	python $d < /dev/null
