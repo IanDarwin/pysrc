@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 
+# using vars() to print an object is kinda messy,
+# so you may want to use a __str__ function instead.
+
 class Trip:
 	"Class represents a Trip from one city to another."
 	def __init__(self, depCity, arrCity):
@@ -9,7 +12,7 @@ class Trip:
 		
 	''' The equivalent of toString in Java and like languages '''
 	def __str__(self):
-		return "Trip from {} to {}".format(self.depCity, self.arrCity)
+		return f"Trip from {self.depCity} to {self.arrCity}"
 
 trip = Trip('Toronto', 'Jamaica')
 
