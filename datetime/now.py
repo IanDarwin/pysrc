@@ -7,4 +7,4 @@ print(datetime.datetime.today())
 import time
 print(time.asctime())
 
-print(time.strftime("%c"))
+print("Hello at", time.strftime("%c"))
