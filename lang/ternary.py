@@ -6,7 +6,9 @@ list = [0,1,2]
 
 i = 2
 
-done = list[i] if i < len(list) else None
-print(done)
+# Other languages:
+# value = i < len(list) ? list[i] : null;
+value = list[i] if i < len(list) else None
+print(value)
 
 
