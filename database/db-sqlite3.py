@@ -25,12 +25,12 @@ cursor.execute("INSERT INTO list(id,name,email) VALUES(1002, 'Spammy', 'spam@ham
 
 conn.commit()
 
-cursor.execute("select id,name,email from list where name like '%y'");
+cursor.execute("select id,name,email from list where name like '%y'")
 results = cursor.fetchall()
 for row in results:
-        print("Row:", "id", row[0], \
+        print("Row:", "id", row[0],
 			"name", row[1], "email", row[2])
 
-print("All done with DB");
-conn.close();
+print("All done with DB")
+conn.close()
 pathlib.Path(file_name).unlink()
