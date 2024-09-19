@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+    <!-- Eclipse config file, ignored by pycharm &c -->
 	<name>pysrc</name>
 	<comment>Ian's collected Python Examples</comment>
 	<projects>
