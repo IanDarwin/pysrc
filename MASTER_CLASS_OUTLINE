@@ -1,0 +1,31 @@
+62	cd $ps
+more starting/*
+ls io
+vi io-pathlib/categorize_files_by_ext.py 
+vi io-pathlib/path_infos.py 
+cat database/db-complete.py 
+python database/db-complete.py 
+ls datasci
+python datasci/linear_regress.py 
+lang/enum.py 
+cat datasci/linear_regress.py 
+
+ls oo
+	tostring.py
+	accessors.py
+	addmethods.py
+	bankaccountdemo.py
+	hasattr.py
+	operatorplus.py
+	privatevarsaccessible.py
+	subclassing.py
+
+ls iteration
+
+cat textproc/fmt.py; lorem | textproc/fmt.py
+
+ls www
+
+ls decorators
+
+ls regex
