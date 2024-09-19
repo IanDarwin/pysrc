@@ -1,4 +1,4 @@
-#!/bin/env python
+#!/usr/bin/env python
 
 # Show doc string on a function and on a class
 
