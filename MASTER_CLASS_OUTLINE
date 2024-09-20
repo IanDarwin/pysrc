@@ -24,6 +24,9 @@ ls iteration
 
 cat textproc/fmt.py; lorem | textproc/fmt.py
 
+ls ai
+    demo ai/lang-chain.txt, more if working & time
+
 ls www
 
 ls decorators
