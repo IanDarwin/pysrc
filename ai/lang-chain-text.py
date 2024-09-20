@@ -14,7 +14,7 @@ from langchain_core.messages import HumanMessage, SystemMessage
 # Find OpenAI API key
 file_path = Path.home() / '.openai-apikey.txt'
 if not file_path.exists():
-    print(f"You can't run this example until you create {file_path} with your actual key")
+    print(f"You can't run this example until you create {file_path} with your OpenAI API key")
     sys.exit(1)
 open(file_path).readline()
 mykey = open(file_path).readline().rstrip()
