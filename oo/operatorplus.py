@@ -13,7 +13,5 @@ class BankAccount:
 acct1 = BankAccount(100)
 acct2 = BankAccount(250)
  
-total = acct1 + acct2
-print(total)
-
+print(acct1 + acct2)
 
