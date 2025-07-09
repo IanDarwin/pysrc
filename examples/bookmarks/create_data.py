@@ -6,18 +6,22 @@
 from sqlite3.dbapi2 import connect
 connString = "bookmarks.db"
 
+# for PostgreSQL
+# from psycopg2 import connect
+# connString = "dbname=test user=test password=fred host=server"
+
 sql_create_topics = "CREATE TABLE topics(id character varying(32) not null, description character varying);"
 
 sql_create_bookmarks = """
-	CREATE TABLE bookmarks(
+	CREATE TABLE bookmark(
 		id bigint integer primary key,
 		owner integer default 1,
-		url character varying not null,
+		url character varying not null unique,
 		text character varying not null,
 		topic_id character varying not null references topic(id)
 	);"""
 
-sql_topic = 'python' # used as pkey and fkey
+sql_topic = 'py' # used as pkey and fkey
 
 with connect(connString) as conn:
 	cur = conn.cursor();
@@ -34,6 +38,6 @@ with connect(connString) as conn:
 					raise Exception("Wrong number of fields on " + line);
 				url = s[0]
 				text = s[1]
-				s = f"INSERT INTO bookmarks(topic_id, url, text) VALUES('{sql_topic}', '{url}', '{text}');"
+				s = f"INSERT INTO bookmark(topic_id, url, text) VALUES('{sql_topic}', '{url}', '{text}');"
 				cur.execute(s);
 print("Insertions All Done");
