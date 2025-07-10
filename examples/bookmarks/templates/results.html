@@ -1,0 +1,49 @@
+<!-- templates/results.html (Jinja2 Template) -->
+<!-- machine-generated, then tweaked -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Results</title>
+	<!-- Link to Tailwind CSS CDN for easy styling -->
+	<script src="https://cdn.tailwindcss.com"></script>
+	<style>
+		/* Custom styles for the Inter font */
+		body {
+			font-family: 'Inter', sans-serif;
+		}
+	</style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+	<div class="bg-white p-8 rounded-lg shadow-xl w-full max-w-2xl">
+		<h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">Query Results</h1>
+
+		{% if results %}
+			<div class="overflow-x-auto">
+				<table class="min-w-full bg-white rounded-lg overflow-hidden">
+					<thead class="bg-gray-200">
+						<tr>
+							<th class="py-3 px-4 text-left text-sm font-semibold text-gray-700 rounded-tl-lg">
+								Python Bookmarks
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for item in results %}
+							<tr class="border-b border-gray-200 last:border-b-0 hover:bg-gray-50">
+								<td class="py-3 px-4 text-sm text-gray-800">
+									<a href="{{ item[1] }}">{{ item[0] }}</a>
+								</td>
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</div>
+		{% else %}
+			<p class="text-center text-gray-600 text-lg">No results found.</p>
+		{% endif %}
+	</div>
+</body>
+</html>
+
