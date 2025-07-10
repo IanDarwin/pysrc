@@ -46,7 +46,6 @@ with connect(connString) as conn:
 					text = s[1]
 					try:
 						sql = f"INSERT INTO bookmark(topic_id, url, text) VALUES('{sql_topic}', '{url}', '{text}');"
-						print("Trying", sql)
 						cur.execute(sql);
 					except Exception as ex:
 						print("Insert failed:", ex)
