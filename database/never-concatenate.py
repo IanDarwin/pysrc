@@ -6,7 +6,7 @@
 # the "SQL Injection" vuln - if the user input is not
 # sanitized to remove strings like ' ; -- then the
 # attacker can enter a string like 
-# "'; drop table students; --"
+# "Robert'; drop table students; --"
 # and if the stars align in their favor, you lose big time!
 # And maybe get your organization name on the front page
 # of the business section - as an IT or even business failure.
