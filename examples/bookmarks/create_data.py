@@ -4,6 +4,9 @@
 # we update the text file from time to time and want to
 # "sync" that into the database when it changes.
 
+import sys
+from pathlib import Path
+
 # for SQLite
 from sqlite3.dbapi2 import connect
 connString = "bookmarks.db"
@@ -13,7 +16,7 @@ connString = "bookmarks.db"
 # connString = "dbname=test user=test password=fred host=server"
 
 # input file
-filename = "/home/ian/lt1906/teachnotes.txt"
+filename = Path.home() / "lt1906/teachnotes.txt"
 
 # Table creation
 sql_create_topic = ("CREATE TABLE IF NOT EXISTS topic("
@@ -41,6 +44,7 @@ with connect(connString) as conn:
 		ifile = open(filename)
 	except FileNotFoundError:
 		print('Failed to open', filename)
+		sys.exit(1)
 	else:
 		with ifile:
 			for line in ifile:
