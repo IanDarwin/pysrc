@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 # create and populate the database.
 # The SQL is complicated by the need to be idempotent since
 # we update the text file from time to time and want to
@@ -17,23 +16,23 @@ connString = "bookmarks.db"
 filename = "/home/ian/lt1906/teachnotes.txt"
 
 # Table creation
-sql_create_topics = ("CREATE TABLE IF NOT EXISTS topic("
+sql_create_topic = ("CREATE TABLE IF NOT EXISTS topic("
 		"id character varying(32) not null unique, description character varying);")
 sql_create_bookmarks = """
 	CREATE TABLE IF NOT EXISTS bookmark(
-		id bigint integer primary key,
+		id integer primary key,
 		owner integer default 1,
 		url character varying not null unique,
 		text character varying not null,
 		topic_id character varying not null references topic(id)
 	);"""
 
-sql_topic = 'py' # used as pkey in topics, and fkey in bookmark
+sql_topic = 'py' # used as pkey in topic, and fkey in bookmark
 
 with connect(connString) as conn:
 	cur = conn.cursor()
 
-	cur.execute(sql_create_topics)
+	cur.execute(sql_create_topic)
 	cur.execute(f"INSERT INTO topic(id,description) VALUES('{sql_topic}',"
 				f"'Python Language, Frameworks, and Applications') on conflict do nothing;")
 	cur.execute(sql_create_bookmarks)
@@ -46,14 +45,14 @@ with connect(connString) as conn:
 		with ifile:
 			for line in ifile:
 				if line.startswith("https:"):
-					s = line[:-1].split(' ', 1);
+					s = line[:-1].split(' ', 1)
 					if len(s) != 2:
-						raise Exception("Wrong number of fields on " + line);
+						raise Exception("Wrong number of fields on " + line)
 					url = s[0]
 					text = s[1]
 					try:
 						sql = f"INSERT INTO bookmark(topic_id, url, text) VALUES('{sql_topic}', '{url}', '{text}');"
-						cur.execute(sql);
+						cur.execute(sql)
 					except Exception as ex:
-						print("Insert failed:", ex)
+						print(f"Insert failed on {url} - {ex}")
 print("Insertions All Done")
