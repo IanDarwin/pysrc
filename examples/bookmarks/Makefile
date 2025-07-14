@@ -1,3 +1,3 @@
 regen:
 	rm bookmarks.db
-	python create_data.py
+	python create_and_populate_db.py
