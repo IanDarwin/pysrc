@@ -1,3 +1,5 @@
+# It is not OK to modify the structure of a list while iterating it
+
 def crashAndBurn():
 	nums=list(range(5))
 	for num in nums:
