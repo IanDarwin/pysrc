@@ -1,5 +1,5 @@
 # pytest works on assertions; see https://docs.pytest.org/en/8.0.x/
-# PyCharm doesn't detect this, so run from command line
+# PyCharm doesn't detect this, so run from command line, or reconfigure pycharm
 
 def inc( x):
     return x + 1
