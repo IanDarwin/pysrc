@@ -8,5 +8,5 @@ class MyTest(unittest.TestCase):
 		self.assertTrue(expected, listutils.rotate(orig))
 
 if __name__ == '__main__':
-        unittest.main()
+	unittest.main()
 

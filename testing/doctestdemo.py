@@ -8,7 +8,6 @@ See https://docs.python.org/3/library/doctest.html
 >>> mystring = 'Hello world'
 >>> mystring.upper()
 'HELLO WORLD'
-
 """
 
 if __name__ == "__main__":
