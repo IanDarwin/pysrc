@@ -1,12 +1,12 @@
 # pytest works on assertions; see https://docs.pytest.org/en/8.0.x/
 # PyCharm doesn't detect this, so run from command line
 
-class PyTestDemo:
-    def inc(self, x):
-        return x + 1
+def inc( x):
+    return x + 1
 
-    def test_answer_bad(self):
-        assert self.inc(3) == 5
+def test_answer_good():
+    assert inc(3) == 4
 
-    def test_answer_good(self):
-        assert self.inc(3) == 4
+# This test is expected to fail, just to show what failure looks like
+def test_answer_bad():
+    assert inc(3) == 5
