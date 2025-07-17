@@ -30,13 +30,13 @@ sql_create_bookmarks = """
 		topic_id character varying not null references topic(id)
 	);"""
 
-sql_topic = 'py' # used as pkey in topic, and fkey in bookmark
+topic_python = 'py' # used as pkey in topic, and fkey in bookmark
 
 with connect(connString) as conn:
 	cur = conn.cursor()
 
 	cur.execute(sql_create_topic)
-	cur.execute(f"INSERT INTO topic(id,description) VALUES('{sql_topic}',"
+	cur.execute(f"INSERT INTO topic(id,description) VALUES('{topic_python}',"
 				f"'Python Language, Frameworks, and Applications') on conflict do nothing;")
 	cur.execute(sql_create_bookmarks)
 
@@ -46,6 +46,7 @@ with connect(connString) as conn:
 		print('Failed to open', filename)
 		sys.exit(1)
 	else:
+		cur.execute(f"DELETE FROM bookmark WHERE topic_id = '{topic_python}'")	# start fresh
 		with ifile:
 			for line in ifile:
 				if line.startswith("https:"):
@@ -53,9 +54,9 @@ with connect(connString) as conn:
 					if len(s) != 2:
 						raise Exception("Wrong number of fields on " + line)
 					url = s[0]
-					text = s[1]
+					text = s[1].replace("'", "''")
 					try:
-						sql = f"INSERT INTO bookmark(topic_id, url, text) VALUES('{sql_topic}', '{url}', '{text}');"
+						sql = f"INSERT INTO bookmark(topic_id, url, text) VALUES('{topic_python}', '{url}', '{text}');"
 						cur.execute(sql)
 					except Exception as ex:
 						print(f"Insert failed on {url} - {ex}")
