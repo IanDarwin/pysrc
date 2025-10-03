@@ -10,8 +10,8 @@ match name := bow.lower():
 		print("Atlantic")
 	case 'pacific' | 'indian':
 		print('Big')
-	case fred:
-		print("Other is ", fred)
+	case dummy:
+		print("Other is ", dummy)
 #	 case _:
 # 		print("Default")
 
